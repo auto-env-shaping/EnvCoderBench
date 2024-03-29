@@ -1,0 +1,24 @@
+compute_torque: |
+  def compute_torque(action: torch.Tensor, state_dict: Dict[str, torch.Tensor]):
+      # compute the raw torques that will be directly applied to motors based on policy output
+      torque = ... 
+      return torque  
+
+compute_observation: |
+  def compute_observation(state_dict: Dict[str, torch.Tensor]) -> torch.Tensor:
+      # compute the observation based on the state dictionary
+      observation = ...
+      return observation
+ 
+compute_reward: |
+  def compute_reward(state_dict: Dict[str, torch.Tensor]) -> torch.Tensor:
+      # compute the reward based on the state dictionary and the action
+      reward = ...
+      return reward
+
+compute_terminal: |
+  def compute_terminal(state_dict: Dict[str, torch.Tensor]) -> torch.Tensor:
+      # compute the done signal based on the state dictionary
+      done = ...
+      return done
+
